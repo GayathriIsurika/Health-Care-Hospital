@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Health Care Hospital</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/Health Care.PNG">
+        <script type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <!-- Font Awesome CDN link -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <body>
+        <!-- Appointment section start -->
+        <section class="Appointment">
+            <div class="section-heading"><span>Appointment</span></div>
+            <div class="dark-block">
+                <h3 class="dark-block-inner">Find a Doctor. Book an
+                    Appointment.</h3>
+            </div>
+            <div class="row">
+                <!-- Image -->
+                <img src="images/doc.jpg" alt="Doctor Image">
+
+                <!-- Form -->
+                <div class="form" id="form">
+                    <input type="text" placeholder="Doctor Name" required
+                        id="name">
+                    <input type="text" placeholder="Full Name" required
+                        id="myName">
+                    <input type="text" placeholder="Any Specialty" required
+                        id="speciality">
+                    <input type="date" required id="date">
+                    <div id="msg1"></div><div id="msg2"></div>
+                    <button type="submit" id="submit">Submit</button>
+                    
+                </div>
+                <br>
+
+            </div>
+        </section>
+
+        <script>
+        document.getElementById("submit").addEventListener("click", function(e) {
+            e.preventDefault();  // Prevent form submission
+
+            // Retrieve values inside the click event
+            var name1 = document.getElementById("name").value;
+            var myName = document.getElementById("myName").value;
+            var speciality = document.getElementById("speciality").value;
+            var date = document.getElementById("date").value;
+            var msg1 = document.getElementById("msg1");
+            var msg2 = document.getElementById("msg2");
+
+            // Basic validation
+            if (name1 !== "" && myName !== "" && speciality !== "" && date !== "") {
+                msg1.innerHTML = "Please wait...";
+                setTimeout(() => {
+                    msg1.innerHTML = 'Sent Successfully, Thank you!';
+                    msg2.innerHTML = "";
+                }, 3000);
+            } else {
+                msg2.innerHTML = "Please fill all the fields.";
+                msg1.innerHTML = "";
+            }
+        });
+    </script>
+
+        <!-- Appointment section End -->
+
+        <!-- Footer section start -->
+        <footer>
+            <div id="contact" class="footer">
+                <h2 class="h2">Connect with us</h2> <br><br>
+                <span><ion-icon name="call-outline"></ion-icon> Hotline:
+                    1993</span><br>
+                <span><ion-icon name="mail-outline"></ion-icon> <a
+                        href="mailto:infor@healthcare">infor@healthcare</a></span><br>
+                <span><ion-icon name="location-outline"></ion-icon> 18/A, Galle
+                    Road, Narahenpita, Colombo 05, Sri Lanka</span>
+                <div class="footer-bottom">
+                    <a
+                        href="https://www.linkedin.com/in/gayathri-isurika-058a27322/">copyright&copy;
+                        Design by Gayathri Isurika</a>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer section End -->
+    </body>
+</html>
