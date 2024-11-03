@@ -6,7 +6,7 @@
 }
 body{
   font-family: "poppins", sans-serif;
-  background: linear-gradient(to left top,#4A628A,#7AB2D3,#B9E5E8,#DFF2EB);
+  background: linear-gradient(to left top,#C6E7FF,#7AB2D3,#B9E5E8,#DFF2EB);
 }
 a, a:hover{
   text-decoration: none;
@@ -299,7 +299,9 @@ section{
   justify-content: center;
 }
 .icons:hover{
-  color: #0d63e479;
+  background: linear-gradient(315deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /* Dark Block (Left-side column) */
 .dark-block {
